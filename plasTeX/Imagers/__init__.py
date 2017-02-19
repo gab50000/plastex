@@ -19,7 +19,9 @@ try:
     import Image as PILImage
     import ImageChops as PILImageChops
 except ImportError:
-    PILImage = PILImageChops = None
+    from PIL import Image as PILImage
+    from PIL import ImageChops as PILImageChops
+
 
 def autoCrop(im, bgcolor=None, margin=0):
     """
